@@ -1,0 +1,32 @@
+module addition
+public adunare
+#include "header.h"
+RSEG CODE
+adunare:
+    MOV     R18, R16
+    LDI     R19, 0
+    MOV     R20, R17
+    LDI     R21, 0
+    ADD     R18, R20
+    ADC     R19, R21
+    MOV     R17,R19
+    MOV     R16,R18
+    ret
+endmod
+module subtraction
+public scadere
+#include "header.h"
+RSEG CODE
+scadere
+    SUB R16,R17
+    RET
+endmod
+module caller
+extern scadere
+public diferenta
+#include "header.h"
+RSEG CODE
+diferenta
+    RCALL scadere
+    RET
+end

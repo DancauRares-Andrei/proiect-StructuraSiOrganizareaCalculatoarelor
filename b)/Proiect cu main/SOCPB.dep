@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3047592203</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Exe\SOCPB.d90</file>
+      <file>$TOOLKIT_DIR$\src\template\cfg3toim.xcl</file>
+      <file>$PROJ_DIR$\SOCPASMmainbiblioteca.r90</file>
+      <file>$PROJ_DIR$\Debug\List\SOCPB.html</file>
+      <file>$PROJ_DIR$\Debug\Obj\functie.r90</file>
+      <file>$PROJ_DIR$\asm.s90</file>
+      <file>$TOOLKIT_DIR$\src\template\cfgm16.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\functie.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\asm.lst</file>
+      <file>$PROJ_DIR$\Debug\List\functie.lst</file>
+      <file>$PROJ_DIR$\functie.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\functie.__cstat.et</file>
+      <file>$PROJ_DIR$\scadere.h</file>
+      <file>$PROJ_DIR$\Debug\List\functie.s90</file>
+      <file>$PROJ_DIR$\Debug\Obj\asm.r90</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 3 0</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\SOCPB.d90</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 6 1 14 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\asm.s90</name>
+      <outputs>
+        <tool>
+          <name>AAVR</name>
+          <file> 14 8</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>AAVR</name>
+          <file> 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\functie.c</name>
+      <outputs>
+        <tool>
+          <name>ICCAVR</name>
+          <file> 13 9 4</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

@@ -1,0 +1,92 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V6.80.7.1083 for Atmel AVR          17/Jan/2023  18:39:03
+// Copyright 1996-2016 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for Atmel AVR
+//
+//    Source file  =  
+//        D:\TUIASI AC CTI\anul III\Structura si organizarea
+//        calculatoarelor\Proiect\Spre complet\Proiect cu main\main.c
+//    Command line =  
+//        "D:\TUIASI AC CTI\anul III\Structura si organizarea
+//        calculatoarelor\Proiect\Spre complet\Proiect cu main\main.c"
+//        --cpu=m16 -mt -o "D:\TUIASI AC CTI\anul III\Structura si organizarea
+//        calculatoarelor\Proiect\Spre complet\Proiect cu main\Debug\Obj" -lC
+//        "D:\TUIASI AC CTI\anul III\Structura si organizarea
+//        calculatoarelor\Proiect\Spre complet\Proiect cu main\Debug\List" -lB
+//        "D:\TUIASI AC CTI\anul III\Structura si organizarea
+//        calculatoarelor\Proiect\Spre complet\Proiect cu main\Debug\List"
+//        --initializers_in_flash --no_cse --no_inline --no_code_motion
+//        --no_cross_call --no_clustering --no_tbaa --module_name=main --debug
+//        -DENABLE_BIT_DEFINITIONS -e --eeprom_size 512 --clib --library_module
+//        -On
+//    Locale       =  Romanian_Romania.1250
+//    List file    =  
+//        D:\TUIASI AC CTI\anul III\Structura si organizarea
+//        calculatoarelor\Proiect\Spre complet\Proiect cu
+//        main\Debug\List\main.s90
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        MODULE main
+
+        RSEG CSTACK:DATA:NOROOT(0)
+        RSEG RSTACK:DATA:NOROOT(0)
+
+        PUBWEAK __?EEARH
+        PUBWEAK __?EEARL
+        PUBWEAK __?EECR
+        PUBWEAK __?EEDR
+        PUBLIC main
+
+        EXTERN adunare
+        EXTERN diferenta
+        EXTERN scadere
+
+// D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Proiect cu main\main.c
+//    1 #include"header.h"
+//    2 int adunare(char a,char b);
+//    3 char scadere(char a,char b);
+//    4 char diferenta(char a,char b);
+
+        RSEG CODE:CODE:NOROOT(1)
+//    5 int main(void){
+main:
+//    6  adunare(255,255);
+        LDI     R17, 255
+        LDI     R16, 255
+        CALL    adunare
+//    7  scadere(1,2);
+        LDI     R17, 2
+        LDI     R16, 1
+        CALL    scadere
+//    8  diferenta(2,3);
+        LDI     R17, 3
+        LDI     R16, 2
+        CALL    diferenta
+//    9  return 0;
+        LDI     R16, 0
+        LDI     R17, 0
+        RET
+//   10 }
+
+        ASEGN ABSOLUTE:DATA:NOROOT,01cH
+__?EECR:
+
+        ASEGN ABSOLUTE:DATA:NOROOT,01dH
+__?EEDR:
+
+        ASEGN ABSOLUTE:DATA:NOROOT,01eH
+__?EEARL:
+
+        ASEGN ABSOLUTE:DATA:NOROOT,01fH
+__?EEARH:
+
+        END
+// 
+// 30 bytes in segment CODE
+// 
+// 30 bytes of CODE memory
+//
+//Errors: none
+//Warnings: none

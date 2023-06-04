@@ -1,0 +1,16 @@
+        NAME    main
+        #include "scadere.h"
+        PUBLIC  main
+        EXTERN scadere,adunare
+        ORG $0
+        RJMP    main
+        
+        RSEG    CODE
+main    LDI R16,1
+        LDI R17,2
+        RCALL scadere
+        LDI R16,255
+        LDI R17,2
+        RCALL adunare
+        RJMP main
+        END     main      

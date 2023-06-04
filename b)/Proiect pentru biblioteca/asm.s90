@@ -1,0 +1,11 @@
+        NAME    main
+        
+        PUBLIC  main
+        
+        ORG $0
+        RJMP    main
+        
+        RSEG    CODE
+main    NOP
+
+        END     main

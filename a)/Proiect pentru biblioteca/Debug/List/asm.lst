@@ -1,0 +1,64 @@
+      1    00000000              module addition
+      2    00000000              public adunare
+      3    00000000              #include "header.h"
+      1    00000000              #ifndef ADUNARE_H
+      2    00000000              #define ADUNARE_H
+      3    00000000              
+      4    00000000              #endif
+      4    00000000              RSEG CODE
+      5    00000000              adunare:
+      6    00000000 2F20             MOV     R18, R16
+      7    00000002 E030             LDI     R19, 0
+      8    00000004 2F41             MOV     R20, R17
+      9    00000006 E050             LDI     R21, 0
+     10    00000008 0F24             ADD     R18, R20
+     11    0000000A 1F35             ADC     R19, R21
+     12    0000000C 2F13             MOV     R17,R19
+     13    0000000E 2F02             MOV     R16,R18
+     14    00000010 9508             ret
+     15    00000012              endmod
+##############################
+#          CRC:5F99          #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 18          #
+##############################
+
+     16    00000000              module subtraction
+     17    00000000              public scadere
+     18    00000000              #include "header.h"
+      1    00000000              #ifndef ADUNARE_H
+      2    00000000              #define ADUNARE_H
+      4    00000000              #endif
+     19    00000000              RSEG CODE
+     20    00000000              scadere
+     21    00000000 1B01             SUB R16,R17
+     22    00000002 9508             RET
+     23    00000004              endmod
+##############################
+#          CRC:E23B          #
+#        Errors:   0         #
+#        Warnings: 0         #
+#          Bytes: 4          #
+##############################
+     24    00000000              module caller
+     25    00000000              extern scadere
+     26    00000000              public diferenta
+     27    00000000              #include "header.h"
+      1    00000000              #ifndef ADUNARE_H
+      2    00000000              #define ADUNARE_H
+      4    00000000              #endif
+     28    00000000              RSEG CODE
+     29    00000000              diferenta
+     30    00000000 ....             RCALL scadere
+     31    00000002 9508             RET
+     32    00000004              end
+##############################
+#          CRC:1254          #
+#        Errors:   0         #
+#        Warnings: 0         #
+#          Bytes: 4          #
+#     Modules:        3      #
+#     Total errors:   0      #
+#     Total warnings: 0      #
+##############################

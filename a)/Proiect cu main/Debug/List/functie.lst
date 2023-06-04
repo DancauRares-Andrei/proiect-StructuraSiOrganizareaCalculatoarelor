@@ -1,0 +1,52 @@
+###############################################################################
+#                                                                             #
+#     IAR Assembler V6.80.1.1057/W32 for Atmel AVR 13/Jan/2023  12:49:14      #
+#     Copyright 2016 IAR Systems AB.                                          #
+#                                                                             #
+#           Target option =  Relative jumps do not wrap                       #
+#           Source file   =  D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\functie.asm#
+#           List file     =  D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Debug\List\functie.lst#
+#           Object file   =  D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Debug\Obj\functie.r90#
+#           Command line  =  D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\functie.asm #
+#                            -v3                                              #
+#                            -OD:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Debug\Obj #
+#                            -s+ -w+ -r -M<>                                  #
+#                            -LD:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Debug\List #
+#                            -cOM -i -B -t8 -u_enhancedCore                   #
+#                            -D__HAS_ENHANCED_CORE__=1 -D__HAS_MUL__=1        #
+#                            -D__MEMORY_MODEL__=1 -D__ATmega16__=1            #
+#                                                                             #
+###############################################################################
+
+      1    00000000              module functie
+      2    00000000              public test
+      3    00000000              RSEG CODE
+      4    00000000              test:
+      5    00000000 2F20             MOV     R18, R16
+      6    00000002 E030             LDI     R19, 0
+      7    00000004 2F41             MOV     R20, R17
+      8    00000006 E050             LDI     R21, 0
+      9    00000008 0F24             ADD     R18, R20
+     10    0000000A 1F35             ADC     R19, R21
+     11    0000000C 0189             MOVW    R17:R16, R19:R18
+     12    0000000E 9508             ret
+     13    00000010              endmod
+##############################
+#          CRC:ED2C          #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 16          #
+##############################
+
+
+
+##############################
+#          CRC:ED2C          #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 16          #
+##############################
+
+
+
+

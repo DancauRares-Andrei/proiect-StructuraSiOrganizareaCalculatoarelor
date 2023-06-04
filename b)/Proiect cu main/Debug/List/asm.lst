@@ -1,0 +1,51 @@
+###############################################################################
+#                                                                             #
+#     IAR Assembler V6.80.1.1057/W32 for Atmel AVR 17/Jan/2023  11:35:31      #
+#     Copyright 2016 IAR Systems AB.                                          #
+#                                                                             #
+#           Target option =  Relative jumps do not wrap                       #
+#           Source file   =  D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Bonus\Proiect cu main\asm.s90#
+#           List file     =  D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Bonus\Proiect cu main\Debug\List\asm.lst#
+#           Object file   =  D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Bonus\Proiect cu main\Debug\Obj\asm.r90#
+#           Command line  =  D:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Bonus\Proiect cu main\asm.s90 #
+#                            -v3                                              #
+#                            -OD:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Bonus\Proiect cu main\Debug\Obj #
+#                            -s+ -w+ -r -M<>                                  #
+#                            -LD:\TUIASI AC CTI\anul III\Structura si organizarea calculatoarelor\Proiect\Spre complet\Bonus\Proiect cu main\Debug\List #
+#                            -cAOM -i -B -t8 -u_enhancedCore                  #
+#                            -D__HAS_ENHANCED_CORE__=1 -D__HAS_MUL__=1        #
+#                            -IC:\Program Files (x86)\IAR Systems\Embedded Workbench 6.80.8\avr\INC\ #
+#                            -D__MEMORY_MODEL__=1 -D__ATmega16__=1            #
+#                                                                             #
+###############################################################################
+
+      1    00000000                      NAME    main
+      2    00000000                      #include "scadere.h"
+      1    00000000              #ifndef SCADERE_H
+      2    00000000              #define SCADERE_H
+      3    00000000              
+      4    00000000              #endif
+      3    00000000                      PUBLIC  main
+      4    00000000                      EXTERN scadere,adunare
+      5    00000000                      ORG $0
+      6    00000000 ....                 RJMP    main
+      7    00000002                      
+      8    00000000                      RSEG    CODE
+      9    00000000 E001         main    LDI R16,1
+     10    00000002 E012                 LDI R17,2
+     11    00000004 ....                 RCALL scadere
+     12    00000006 EF0F                 LDI R16,255
+     13    00000008 E012                 LDI R17,2
+     14    0000000A ....                 RCALL adunare
+     15    0000000C CFF9                 RJMP main
+     16    0000000E                      END     main      
+##############################
+#          CRC:298F          #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 16          #
+##############################
+
+
+
+
